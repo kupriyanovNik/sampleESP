@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>833781765739-ra0dc6c4qu3929caifl0r3e9ojr7mf17.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.833781765739-ra0dc6c4qu3929caifl0r3e9ojr7mf17</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDU8WWMOU_OI0DsqUbfSER9bqgR7M1bZvw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>833781765739</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kupriyanov.sampleESP</string>
+	<key>PROJECT_ID</key>
+	<string>esp32sample-6eb0b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>esp32sample-6eb0b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:833781765739:ios:8c3191904a144a09e5832e</string>
+	<key>DATABASE_URL</key>
+	<string>https://esp32sample-6eb0b-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
