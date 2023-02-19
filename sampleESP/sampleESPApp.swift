@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct sampleESPApp: App {
+    @StateObject var model = ViewModel()
     init() {
         FirebaseApp.configure()
     }
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(model)
         }
     }
 }

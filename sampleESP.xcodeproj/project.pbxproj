@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		420C931729A255CD006ECFA5 /* WaterLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420C931629A255CD006ECFA5 /* WaterLevelView.swift */; };
+		421FA05D29A384480037FB0E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FA05C29A384480037FB0E /* InfoView.swift */; };
+		4252126129A2777D00EB75D7 /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252126029A2777D00EB75D7 /* PresetsView.swift */; };
 		42586CFB29A153F600CCAE7B /* TemperatureChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42586CFA29A153F600CCAE7B /* TemperatureChartView.swift */; };
 		42586CFD29A157C900CCAE7B /* GhumiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42586CFC29A157C900CCAE7B /* GhumiChartView.swift */; };
 		425C05C1299BFE4F008150A3 /* sampleESPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425C05C0299BFE4F008150A3 /* sampleESPApp.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		420C931629A255CD006ECFA5 /* WaterLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterLevelView.swift; sourceTree = "<group>"; };
+		421FA05C29A384480037FB0E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		4252126029A2777D00EB75D7 /* PresetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetsView.swift; sourceTree = "<group>"; };
 		42586CFA29A153F600CCAE7B /* TemperatureChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureChartView.swift; sourceTree = "<group>"; };
 		42586CFC29A157C900CCAE7B /* GhumiChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhumiChartView.swift; sourceTree = "<group>"; };
 		425C05BD299BFE4F008150A3 /* sampleESP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleESP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4252125F29A2774900EB75D7 /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				42586CFC29A157C900CCAE7B /* GhumiChartView.swift */,
+				42586CFA29A153F600CCAE7B /* TemperatureChartView.swift */,
+				42AFEB1929A1427C0037B1D3 /* HumidityChartView.swift */,
+				420C931629A255CD006ECFA5 /* WaterLevelView.swift */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
 		425C05B4299BFE4F008150A3 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				425C05C2299BFE4F008150A3 /* ContentView.swift */,
+				4252126029A2777D00EB75D7 /* PresetsView.swift */,
 				425C05D7299C0690008150A3 /* Home.swift */,
-				420C931629A255CD006ECFA5 /* WaterLevelView.swift */,
-				42AFEB1929A1427C0037B1D3 /* HumidityChartView.swift */,
-				42586CFA29A153F600CCAE7B /* TemperatureChartView.swift */,
-				42586CFC29A157C900CCAE7B /* GhumiChartView.swift */,
+				421FA05C29A384480037FB0E /* InfoView.swift */,
+				4252125F29A2774900EB75D7 /* ChartView */,
 				42B85D2529A13AF100F5ACC9 /* ChartView.swift */,
 			);
 			path = View;
@@ -192,9 +206,11 @@
 				425C05C3299BFE4F008150A3 /* ContentView.swift in Sources */,
 				42B85D2629A13AF100F5ACC9 /* ChartView.swift in Sources */,
 				425C05D8299C0690008150A3 /* Home.swift in Sources */,
+				421FA05D29A384480037FB0E /* InfoView.swift in Sources */,
 				42B85D2429A12A3800F5ACC9 /* ViewModel.swift in Sources */,
 				42586CFD29A157C900CCAE7B /* GhumiChartView.swift in Sources */,
 				42AFEB1A29A1427C0037B1D3 /* HumidityChartView.swift in Sources */,
+				4252126129A2777D00EB75D7 /* PresetsView.swift in Sources */,
 				425C05C1299BFE4F008150A3 /* sampleESPApp.swift in Sources */,
 				42AFEB1C29A14B770037B1D3 /* Extensions.swift in Sources */,
 				420C931729A255CD006ECFA5 /* WaterLevelView.swift in Sources */,

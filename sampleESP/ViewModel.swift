@@ -10,8 +10,39 @@ import SwiftUI
 import FirebaseDatabase
 
 class ViewModel: ObservableObject {
+    @Published var showInfo: Bool = false 
+    @Published var selectedPlant: SelectedPlant = .undefined {
+        didSet {
+            switch selectedPlant {
+                case .undefined:
+                    send("Values/ghumi", value: values[0])
+                    send("Values/humi", value: values[1])
+                    send("Values/temp", value: values[2])
+                case .tomato:
+                    send("Values/ghumi", value: 75)
+                    send("Values/humi", value: 60)
+                    send("Values/temp", value: 25)
+                case .cucumber:
+                    send("Values/ghumi", value: 70)
+                    send("Values/humi", value: 65)
+                    send("Values/temp", value: 18)
+                case .carrot:
+                    send("Values/ghumi", value: 75)
+                    send("Values/humi", value: 50)
+                    send("Values/temp", value: 20)
+                case .parsley:
+                    send("Values/ghumi", value: 60)
+                    send("Values/humi", value: 45)
+                    send("Values/temp", value: 17)
+            }
+        }
+    }
     @Published(key: "main") var main: [Int] = [0, 0, 0, 0, 0, 0, 0]
-    @Published(key: "values") var values: [Int] = [55, 55, 55]
+    @Published(key: "values") var values: [Int] = [55, 55, 55] {
+        didSet {
+            
+        }
+    }
     
     private let mainTuple: [Int: String] = [
         0: "Sensor1/ghumi",
@@ -64,6 +95,31 @@ class ViewModel: ObservableObject {
         ref.child(path).setValue( value )
         UIImpactFeedbackGenerator(style: .medium).impactOccurred(intensity: 5)
     }
+    func sendBool(_ path: String, value: Bool) -> Void {
+        ref.child(path).setValue( value )
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred(intensity: 5)
+    }
     
+    func toggleLamp() {
+        ref.child("Values/lampOn").getData { error, snap in
+            guard error == nil else { return }
+            var a: Bool  = snap?.value as! Bool
+            print(a)
+            if a == true {
+                self.sendBool("Values/lampOn", value: false)
+            } else {
+                self.sendBool("Values/lampOn", value: true)
+            }
+        }
+    }
 }
 
+
+enum SelectedPlant: String, CaseIterable {
+    case undefined = "Другое..."
+    case tomato = "Помидор"
+    case cucumber = "Огурец"
+    case carrot = "Морковка"
+    case parsley = "Петрушка"
+    
+}

@@ -56,9 +56,11 @@ struct GhumiSelectView: View {
                 }
             }
             Spacer()
-            HStack {
-                Text("Водяной насос включится, если средняя влажность меньше \(model.values[0])")
-                Stepper("", value: $model.values[0], in: 0...100, step: 1)
+            if model.selectedPlant == .undefined {
+                HStack {
+                    Text("Водяной насос включится, если средняя влажность меньше \(model.values[0])")
+                    Stepper("", value: $model.values[0], in: 0...100, step: 1)
+                }
             }
             Spacer()
             Text("Влажность почвы измеряется в процентах двумя рандомными датчиками с али")

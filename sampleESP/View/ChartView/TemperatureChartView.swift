@@ -56,9 +56,11 @@ struct TemperatureSelectView: View {
                 }
             }
             Spacer()
-            HStack {
-                Text("Форточка откроется, если средняя температура меньше \(model.values[2])")
-                Stepper("", value: $model.values[2], in: 0...100, step: 1)
+            if model.selectedPlant == .undefined {
+                HStack {
+                    Text("Форточка откроется, если средняя температура меньше \(model.values[2])")
+                    Stepper("", value: $model.values[2], in: 0...100, step: 1)
+                }
             }
             Spacer()
             Text("Температура измеряется в градусах Цельсия двумя датчиками DHT11 и DHT22")

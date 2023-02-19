@@ -55,9 +55,11 @@ struct HumiditySelectView: View {
                 }
             }
             Spacer()
-            HStack {
-                Text("Увлажнитель включится, если средняя влажность меньше \(model.values[1])")
-                Stepper("", value: $model.values[1], in: 0...100, step: 1)
+            if model.selectedPlant == .undefined {
+                HStack {
+                    Text("Увлажнитель включится, если средняя влажность меньше \(model.values[1])")
+                    Stepper("", value: $model.values[1], in: 0...100, step: 1)
+                }
             }
             Spacer()
             Text("Влажность измеряется в процентах двумя датчиками DHT11 и DHT22")

@@ -17,6 +17,7 @@ struct Home: View {
     let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     
     
+
     var body: some View {
         NavigationStack{
             ScrollView(.vertical, showsIndicators: false) {
@@ -48,7 +49,9 @@ struct Home: View {
         .tint(.black)
         .onReceive(timer) { new in
             model.fetchData()
-            model.fetchValues()
+            if model.selectedPlant != .undefined {
+                model.fetchValues()
+            }
         }
     }
     
