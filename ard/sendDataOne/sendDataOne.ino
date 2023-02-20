@@ -77,7 +77,7 @@ void loop() {
     useFB(humi, "Sensor1/humi");
     useFB(tempC, "Sensor1/temp");
     useFB(wlevel, "Sensor1/wlevel");
-    lamp();
+//lamp();
     pomp(wlevel);
 //    uvl();
 
